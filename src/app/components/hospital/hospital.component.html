@@ -1,0 +1,7 @@
+<ul class="list-group">
+  <li routerLink = "/patients" [class]="getAllPatientsClass()">All Patients</li>
+  <li (click)="setCurrentHospital(hospital)"
+  routerLink="/patients/hospital/{{hospital.id}}"
+  *ngFor="let hospital of hospitals" 
+  [class]="getCurrentHospitalClass(hospital)">{{hospital.name}}</li>
+</ul>
